@@ -21,3 +21,5 @@ class Monster extends Character {
 // Testbed
 const monster = new Monster();
 monster.attack();
+
+module.exports = Monster;

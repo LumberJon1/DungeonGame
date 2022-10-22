@@ -17,7 +17,6 @@ class Player extends Character{
 
         // Bonuses
         this.acBonus = 0;
-        this.initiativeBonus = 0;
 
         // Level and Class Info
         this.level = 1;
@@ -94,3 +93,5 @@ class Player extends Character{
     }
 
 }
+
+module.exports = Player;

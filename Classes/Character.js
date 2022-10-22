@@ -10,6 +10,8 @@ class Character {
         this.hp = 10;
         this.items = [];
         this.dead = false;
+        this.initiative = 20;
+        this.initiativeBonus = 0;
         // this.move = 3;
     }
 
@@ -36,6 +38,12 @@ class Character {
         }
     }
 
+    rollInitiative() {
+        let roll = Math.floor(Math.random() * this.initiative) + 1;
+        roll += this.initiativeBonus;
+        return roll;
+    }
+
     attack() {
         // Total value starts at 0 and gets incremented by the value of each roll
         let total = 0;
@@ -53,3 +61,5 @@ class Character {
     }
 
 }
+
+module.exports = Character;
