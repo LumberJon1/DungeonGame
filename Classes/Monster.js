@@ -1,3 +1,5 @@
+const Character = require("./Character");
+
 class Monster extends Character {
 
     // Constructor

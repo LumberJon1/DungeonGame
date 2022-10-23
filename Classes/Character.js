@@ -41,6 +41,7 @@ class Character {
     rollInitiative() {
         let roll = Math.floor(Math.random() * this.initiative) + 1;
         roll += this.initiativeBonus;
+        console.log(this.name+" rolled a "+(roll+this.initiativeBonus)+" for initiative.");
         return roll;
     }
 
