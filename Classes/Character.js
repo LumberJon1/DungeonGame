@@ -4,7 +4,7 @@ class Character {
     constructor(name="Character") {
         this.name = name;
         this.ac = 10;
-        this.attackDice = 6;
+        this.dmgDice = 6;
         this.numDice = 1;
         this.attackBonus = 0;
         this.hp = 10;
@@ -12,6 +12,7 @@ class Character {
         this.dead = false;
         this.initiative = 20;
         this.initiativeBonus = 0;
+        this.characterType = "Monster";
         // this.move = 3;
     }
 
@@ -51,8 +52,8 @@ class Character {
 
         // Roll once per numDice
         for (let i = 0; i < this.numDice; i++) {
-            let roll = Math.floor(Math.random() * this.attackDice) + 1;
-            console.log("Rolled "+roll);
+            let roll = Math.floor(Math.random() * 20) + 1;
+            console.log("\nRolled a "+roll+" to hit target.");
             // Apply any bonuses
             roll += this.attackBonus;
             total += roll;

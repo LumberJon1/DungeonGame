@@ -8,6 +8,9 @@ class Player extends Character{
         // Invoke super
         super(name);
 
+        // Overwrite the default "Monster" characterType attribute
+        this.characterType = "Player";
+
         // Unique attributes...
         // Ability Scores
         this.strength = 10;
