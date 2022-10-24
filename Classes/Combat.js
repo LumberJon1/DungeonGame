@@ -103,7 +103,7 @@ class Combat {
             if (combatant[1] === "Player") {
                 player = combatant[0];
             }
-        })
+        });
         
         // Roll and get the monster's attack result
         let attackRoll = monster.attack();
@@ -137,12 +137,28 @@ class Combat {
     playerTurn() {
         // Code here
         console.log("\nTaking player's turn...");
+        let player = this.initiativeArray[this.currentTurn][0];
+
+        // For now console log allowable targets, eventually map these to HTML elements
+        const enemies = [];
+        enemies.push(this.initiativeArray.slice(0, this.currentTurn))
+        enemies.push(this.initiativeArray.slice(this.currentTurn +1, this.initiativeArray.length));
+
+        // TODO: Prompt for choice between attacking, fleeing, or using an item
+        
+        // if attack, prompt for target selection (For not not conditional)
+        console.log("\nChoose from allowable targets to attack: \n"+enemies);
+
+        // else if flee, end combat
+        // TODO: Think of a way to disincentivize flight from combat
 
     }
 
 
     endCombat() {
         // Code here
+        console.log("\nCombat has ended.");
+        // TODO: Assign XP if the player is still alive
     }
 
 
