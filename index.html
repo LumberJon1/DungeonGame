@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Dungeon Game</title>
+</head>
+<body class="bg-slate-100 h-screen">
+
+    <section id="viewport-section" class="w-full border border-gray-800 h-1/4">
+        <!-- 
+            The viewport will initially hold messages but could display images in future versions.
+         -->
+
+    </section>
+    <section class="h-3/4">
+        <section id="menu-section" chass="w-full h-1/6">
+            <!-- The menu will contain buttons like "inventory" and "character sheet" -->
+            <div id="menu-div" class="w-full flex items-center justify-center border border-cyan-800 p-3">
+                
+                <button class="border border-cyan-800 text-zinc-200 bg-slate-500 rounded p-2">
+                    Button
+                </button>
+    
+            </div>
+    
+        </section>
+        <section id="menu-display-section" class="h-5/6 w-full bg-red-400">
+            <!-- The menu display will show the UI page for the active menu, i.e. the player inventory -->
+    
+        </section>
+    </section>
+
+    <!-- Link scripts -->
+    <script src="./assets/scripts/script.js" type="module"></script>
+    <script src="./assets/scripts/combat.js" type="module"></script>
+</body>
+</html>
