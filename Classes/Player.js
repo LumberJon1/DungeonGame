@@ -22,6 +22,7 @@ class Player extends Character{
 
         // Bonuses
         this.acBonus = 0;
+        this.hpBonus = 0;
 
         // Level and Class Info
         this.level = 1;
