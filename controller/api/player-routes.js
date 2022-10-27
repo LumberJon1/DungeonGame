@@ -33,6 +33,33 @@ router.post("/character", (req, res) => {
     let playerData = {...req.body};
     console.log(playerData);
 
+    // Assign each property to the testPlayer
+    // testPlayer.characterType = req.body.characterType
+    // testPlayer.strength = req.body.strength
+    // testPlayer.intelligence = req.body.intelligence
+    // testPlayer.wisdom = req.body.wisdom
+    // testPlayer.dexterity = req.body.dexterity
+    // testPlayer.constitution = req.body.constitution
+    // testPlayer.charisma = req.body.charisma
+    // testPlayer.acBonus = req.body.acBonus
+    // testPlayer.level = req.body.level
+    // testPlayer.xp = req.body.xp
+    // testPlayer.nfnl = req.body.nfnl
+    // testPlayer.armor = req.body.armor
+    // testPlayer.weapons = req.body.weapons
+    // testPlayer.weaponEquipped = req.body.weaponEquipped
+    // testPlayer.armorEquipped = req.body.armorEquipped
+    // testPlayer.copper = req.body.copper
+    // testPlayer.silver = req.body.silver
+    // testPlayer.gold = req.body.gold
+    // testPlayer.monstersDefeated = req.body.monstersDefeated
+    // testPlayer.highestLvlMonster = req.body.highestLvlMonster
+    // testPlayer.totalDmgTaken = req.body.totalDmgTaken
+    // testPlayer.hitRatio = req.body.hitRatio
+    // testPlayer.moneyAccrued = req.body.moneyAccrued
+    // testPlayer.encounters = req.body.encounters
+    // testPlayer.distanceTraveled = req.body.distanceTraveled
+
     res.json(playerData);
 });
 
