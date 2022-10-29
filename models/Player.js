@@ -1,4 +1,4 @@
-const {Model, DataTypes} = require("sequelize");
+const {Model, DataTypes, Sequelize} = require("sequelize");
 const sequelize = require("../config/connection");
 
 // Create player model
@@ -20,8 +20,17 @@ Player.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                isAlpha: true,
+                isNumeric: false,
                 len: [1, 30]
+            }
+        },
+
+        // Character type
+        characterType: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                isAlpha: true
             }
         },
 
@@ -151,23 +160,13 @@ Player.init(
             }
         },
 
+        // TODO: Define arrays for storing armor, weapons, money, and items
+
         // Armor
-        armor: {
-            type: DataTypes.ARRAY,
-            allowNull: false
-        },
 
         // Weapons
-        weapons: {
-            type: DataTypes.ARRAY,
-            allowNull: false
-        },
 
         // Money
-        money: {
-            type: DataTypes.ARRAY,
-            allowNull: false
-        },
 
         // Stats
 
