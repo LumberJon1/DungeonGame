@@ -20,7 +20,7 @@ Player.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                isNumeric: false,
+                // isNumeric: false,
                 len: [1, 30]
             }
         },

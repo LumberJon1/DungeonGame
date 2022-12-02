@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { where } = require("../../../Module 18/Social-Butterfly/models/Thought");
 const { Player } = require("../../models");
 
 
@@ -69,6 +70,18 @@ router.post("/", (req, res) => {
 router.put("/:id", (req, res) => {
     // TODO: Create PUT
     console.log("Put");
+    Player.update({...req.body}, {
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(
+        updatedPlayerData => res.json(updatedPlayerData)
+    )
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
 })
 
 // DELETE route for player
@@ -76,7 +89,7 @@ router.put("/:id", (req, res) => {
 // Inventory Routes...
 
 // GET route for user inventory data
-router.get("/inventory", (req, res) => {
+router.get("/:id/inventory", (req, res) => {
     let items = testPlayer.items;
     let weapons = testPlayer.weapons;
     let armor = testPlayer.armor;
@@ -88,15 +101,13 @@ router.get("/inventory", (req, res) => {
     // });
 });
 
-// POST route for player inventory
-router.post("/inventory", (req, res) => {
+// PUT route for player inventory
+router.put("/:id/inventory", (req, res) => {
     let itemData = {...req.body};
     console.log(itemData);
     
     res.json(itemData);
 });
-
-// PUT route for inventory
 
 // DELETE route for inventory
 
