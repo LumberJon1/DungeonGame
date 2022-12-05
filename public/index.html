@@ -20,8 +20,11 @@
             <!-- The menu will contain buttons like "inventory" and "character sheet" -->
             <div id="menu-div" class="w-full flex items-center justify-center border border-cyan-800 p-3">
                 
-                <button class="border border-cyan-800 text-zinc-200 bg-slate-500 rounded p-2">
-                    Button
+                <button id="randomizeScores" class="border border-cyan-800 text-zinc-200 bg-slate-500 rounded p-2 m-2">
+                    Randomize Scores
+                </button>
+                <button id="randomizeName" class="border border-cyan-800 text-zinc-200 bg-slate-500 rounded p-2">
+                    Randomize Name
                 </button>
     
             </div>
@@ -33,17 +36,17 @@
             <div id="basic-info-div" class="h-1/5 w-full bg-sky-400 flex justify-evenly items-center">
                 <div id="hp-div" class="flex w-1/4 justify-evenly">
                     <h2>HP: </h2>
-                    <p>current</p>
+                    <p id="currentHP">current</p>
                     <p>/</p>
-                    <p>max</p>
+                    <p id="maxHP">max</p>
                 </div>
                 <div id="ac-div" clas="flex w-1/4">
                     <h2>AC: </h2>
-                    <p>score</p>
+                    <p id="armorClass">score</p>
                 </div>
                 <div id="name-div" class="flex flex-col items-center justify-center">
                     <h2>Name</h2>
-                    <p>Name of the character</p>
+                    <p id="characterName">Name of the character</p>
 
                 </div>
                 <div id="xp-div" class="flex w-1/4 justify-evenly">
@@ -53,9 +56,9 @@
                         <h2>NFNL:</h2>
                     </div>
                     <div>
-                        <p>1</p>
-                        <p>0</p>
-                        <p>400</p>
+                        <p id="level">1</p>
+                        <p id="xp">0</p>
+                        <p id="nfnl">400</p>
                     </div>
                 </div>
 
@@ -63,7 +66,7 @@
             <div id="attributes-div" class="flex flex-col w-1/3 h-4/5">
                 <div id="strength-div" class="flex bg-slate-200 items-center p-2 border border-slate-800 justify-evenly">
                     <h2>STRENGTH</h2>
-                    <p id="strength-score">Score here</p>
+                    <p id="strength-score" class="abilityScore">10</p>
                     <div class="flex flex-col">
                         <button class="border border-slate-600 rounded-sm p-1 w-8" data-modifier="plus" data-target="strength">+</button>
                         <button class="border border-slate-600 rounded-sm p-1 w-8" data-modifier="minus" data-target="strength">-</button>
@@ -71,7 +74,7 @@
                 </div>
                 <div id="intelligence-div" class="flex bg-slate-200 items-center p-2 border border-slate-800 justify-evenly">
                     <h2>INTELLIGENCE</h2>
-                    <p id="intelligence-score">Score here</p>
+                    <p id="intelligence-score" class="abilityScore">10</p>
                     <div class="flex flex-col">
                         <button class="border border-slate-600 rounded-sm p-1 w-8" data-modifier="plus" data-target="intelligence">+</button>
                         <button class="border border-slate-600 rounded-sm p-1 w-8" data-modifier="minus" data-target="intelligence">-</button>
@@ -79,7 +82,7 @@
                 </div>
                 <div id="wisdom-div" class="flex bg-slate-200 items-center p-2 border border-slate-800 justify-evenly">
                     <h2>WISDOM</h2>
-                    <p id="wisdom-score">Score here</p>
+                    <p id="wisdom-score" class="abilityScore">10</p>
                     <div class="flex flex-col">
                         <button class="border border-slate-600 rounded-sm p-1 w-8" data-modifier="plus" data-target="wisdom">+</button>
                         <button class="border border-slate-600 rounded-sm p-1 w-8" data-modifier="minus" data-target="wisdom">-</button>
@@ -87,7 +90,7 @@
                 </div>
                 <div id="dexterity-div" class="flex bg-slate-200 items-center p-2 border border-slate-800 justify-evenly">
                     <h2>DEXTERITY</h2>
-                    <p id="dexterity-score">Score here</p>
+                    <p id="dexterity-score" class="abilityScore">10</p>
                     <div class="flex flex-col">
                         <button class="border border-slate-600 rounded-sm p-1 w-8" data-modifier="plus" data-target="dexterity">+</button>
                         <button class="border border-slate-600 rounded-sm p-1 w-8" data-modifier="minus" data-target="dexterity">-</button>
@@ -95,7 +98,7 @@
                 </div>
                 <div id="constitution-div" class="flex bg-slate-200 items-center p-2 border border-slate-800 justify-evenly">
                     <h2>CONSTITUTION</h2>
-                    <p id="constitution-score">Score here</p>
+                    <p id="constitution-score" class="abilityScore">10</p>
                     <div class="flex flex-col">
                         <button class="border border-slate-600 rounded-sm p-1 w-8" data-modifier="plus" data-target="constitution">+</button>
                         <button class="border border-slate-600 rounded-sm p-1 w-8" data-modifier="minus" data-target="constitution">-</button>
@@ -103,7 +106,7 @@
                 </div>
                 <div id="charisma-div" class="flex bg-slate-200 items-center p-2 border border-slate-800 justify-evenly">
                     <h2>CHARISMA</h2>
-                    <p id="charisma-score">Score here</p>
+                    <p id="charisma-score" class="abilityScore">10</p>
                     <div class="flex flex-col">
                         <button class="border border-slate-600 rounded-sm p-1 w-8" data-modifier="plus" data-target="charisma">+</button>
                         <button class="border border-slate-600 rounded-sm p-1 w-8" data-modifier="minus" data-target="charisma">-</button>
